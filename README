@@ -1,2 +1,22 @@
-Scxbx db f n n
-.,db,b ,,b
+# AI & ML-Based Proctoring System
+
+## Overview
+This project is an **AI and Machine Learning-based online proctoring system** designed to monitor exam-takers remotely. The system uses **computer vision** and **behavioral analysis** to ensure academic integrity during online assessments.
+
+### Features
+- **Real-time face detection** to verify the identity of the examinee.
+- **Eye and gaze tracking** to detect suspicious behavior.
+- **Cheating behavior detection** using AI models.
+- **Screenshot logging** and **activity monitoring**.
+- **Lightweight and web-based frontend** for easy access.
+
+### Tech Stack
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Python (Flask/Django) or Node.js
+- **AI/ML Models:** OpenCV, TensorFlow / PyTorch
+- **Database:** SQLite / PostgreSQL / MongoDB
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/ai-ml-proctoring-system.git
