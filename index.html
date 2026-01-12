@@ -1,0 +1,78 @@
+
+---
+
+### **2️⃣ Sample Frontend (index.html)**
+
+Here’s a **simple, functional starting point** for the frontend:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI & ML Proctoring System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        video {
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI & ML Proctoring System</h1>
+        <p>Real-time exam monitoring with AI</p>
+    </header>
+
+    <video id="webcam" width="640" height="480" autoplay></video>
+    <br>
+    <button onclick="startProctoring()">Start Proctoring</button>
+
+    <script>
+        const video = document.getElementById('webcam');
+
+        async function startProctoring() {
+            if (navigator.mediaDevices.getUserMedia) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                    video.srcObject = stream;
+                    alert("Proctoring started! AI monitoring active.");
+                    // Future: integrate AI detection logic here
+                } catch (err) {
+                    alert("Error accessing webcam: " + err);
+                }
+            } else {
+                alert("getUserMedia not supported in this browser.");
+            }
+        }
+    </script>
+</body>
+</html>
